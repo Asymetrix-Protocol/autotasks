@@ -1,0 +1,51 @@
+{
+  "name": "prize-processor",
+  "version": "1.0.1",
+  "description": "Autotask to for selecting the winners and pay the prizes",
+  "author": "Asymetrix Inc.",
+  "license": "ISC",
+  "main": "lib/handler.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "private": true,
+  "scripts": {
+    "format": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write \"**/*.{ts,js}\"",
+    "build": "rollup -c rollup.config.js",
+    "start": "ts-node ./src/cli.ts",
+    "update": "npm run build && ./script/updateTask.js",
+    "tsc": "tsc",
+    "test": "jest ./__tests__/index.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/contracts": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "axios": "^1.2.1",
+    "defender-relay-client": "1.37.0",
+    "ethers": "^5.7.2",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "ts-md5": "^1.3.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "23.0.2",
+    "@rollup/plugin-json": "5.0.1",
+    "@rollup/plugin-node-resolve": "15.0.1",
+    "@rollup/plugin-typescript": "9.0.2",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/md5": "^2.3.2",
+    "builtin-modules": "3.3.0",
+    "defender-autotask-client": "1.37.0",
+    "dotenv": "16.0.3",
+    "rollup": "3.2.5",
+    "rollup-plugin-inject-process-env": "1.3.1",
+    "shx": "^0.3.4"
+  }
+}

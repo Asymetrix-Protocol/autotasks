@@ -1,0 +1,13 @@
+packages/*/.envrc
+packages/*/lib
+
+lerna-debug.log
+npm-debug.log
+
+node_modules/
+
+package-lock.json
+yarn.lock
+
+.envrc
+.env
